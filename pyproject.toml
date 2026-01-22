@@ -1,0 +1,14 @@
+[project]
+name = "crowdsourcing-labelling-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django==4.2.27",
+    "djangorestframework>=3.16.1",
+    "djangorestframework-simplejwt>=5.5.1",
+    "drf-spectacular>=0.29.0",
+    "psycopg[binary]>=3.3.2",
+    "python-dotenv>=1.2.1",
+]
