@@ -81,7 +81,7 @@ Cette plateforme permet :
    uv run python manage.py migrate
    ```
 
-6. **Créer un superutilisateur**
+6. **Créer un superutilisateur et connecter le super utilisateur**
    ```bash
    uv run python manage.py createsuperuser
    ```
@@ -92,6 +92,8 @@ Cette plateforme permet :
    ```
 
 L'API est accessible sur `http://localhost:8000`
+
+## NB: Connectez vous sur l'interface web en tant qu'administrateur avant d'acceder à la doc (localhost:8000/admin)
 
 ## Documentation API
 
