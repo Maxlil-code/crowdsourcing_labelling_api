@@ -15,3 +15,14 @@ class IsValidator(permissions.BasePermission):
 
     def has_permission(self, request, view):
         return request.user and request.user.is_authenticated and request.user.role == 'validator'
+
+
+class IsAdminOrReadOnly(permissions.BasePermission):
+    """
+    Acces en lecture pour tous les utilisateurs authentifiés.
+    """
+
+    def has_permission(self, request, view):
+        if request.method in permissions.SAFE_METHODS:
+            return request.user and request.user.is_authenticated
+        return request.user and request.user.is_authenticated and request.user.role == 'admin'
